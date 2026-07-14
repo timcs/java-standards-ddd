@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>4.1.0</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>top.binaryx.ddd</groupId>
+    <artifactId>java-standards-ddd</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>java-standards-common</module>
+        <module>java-standards-api</module>
+        <module>java-standards-infra</module>
+        <module>java-standards-service</module>
+        <module>java-standards-facade</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <mybatis.plus.version>3.5.17</mybatis.plus.version>
+        <junit.version>5.10.2</junit.version>
+    </properties>
+
+    <!-- 全局统一引入Lombok，所有子模块直接使用 -->
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- 统一版本管理 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>top.binaryx.ddd</groupId>
+                <artifactId>java-standards-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.binaryx.ddd</groupId>
+                <artifactId>java-standards-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.binaryx.ddd</groupId>
+                <artifactId>java-standards-infra</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.binaryx.ddd</groupId>
+                <artifactId>java-standards-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.binaryx.ddd</groupId>
+                <artifactId>java-standards-facade</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

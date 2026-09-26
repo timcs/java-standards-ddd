@@ -45,6 +45,12 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.github.f4b6a3</groupId>
+            <artifactId>uuid-creator</artifactId>
+            <version>5.3.7</version>
+        </dependency>
     </dependencies>
 
     <!-- 统一版本管理 -->
